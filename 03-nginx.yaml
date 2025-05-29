@@ -17,5 +17,3 @@
         name: nginx
         state: started 
 
-    - name: Copy nginx configuration file
-
