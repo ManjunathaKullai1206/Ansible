@@ -1,0 +1,13 @@
+- name: Variables playbook
+  hosts: local
+  connection: local
+
+  vars:
+    course_name: "Ansible Course"
+    instructor: "Thais"
+    course_duration: "4 weeks"
+
+  tasks:
+    - name: Print the course details
+      ansible.builtin.debug:
+        msg: "This is the {{ course_name }} course by {{ instructor }}. It lasts for {{ course_duration }}"
