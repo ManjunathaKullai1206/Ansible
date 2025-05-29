@@ -1,0 +1,21 @@
+- name: Install and configure the nigix server
+  hosts: frontend
+  become: true
+  
+  tasks:
+    - name: Install nginx Server
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+    - name: Start nginx service
+      ansible.builtin.systemd:
+        name: nginx
+        state: started
+        enabled: true
+    - name: Ensure nginx is running
+      ansible.builtin.service:
+        name: nginx
+        state: started 
+
+    - name: Copy nginx configuration file
+
