@@ -1,6 +1,6 @@
 - name: Play1
-  hosts: loacal
-  connection: loacal
+  hosts: local
+  connection: local
 
   tasks:
     - name: Thais is Play1
