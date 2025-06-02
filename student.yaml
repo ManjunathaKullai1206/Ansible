@@ -1,0 +1,11 @@
+- name: manjuntha 
+  age: 30
+  email: manjunatha@gmail.com
+
+  adddress:
+    - type: permanent
+      city: bangalore
+      state: karnataka
+    - tyoe: current
+      city: bangalore
+      state: karnataka
