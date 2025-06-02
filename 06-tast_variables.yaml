@@ -1,4 +1,4 @@
-- name : manjunatha
+- name: manjunatha
   hosts: local
   connection: local
 
@@ -8,12 +8,12 @@
     trainer: "Manjunatha Kullai"
 
     tasks:
-      - name: Print the course details
-        ansible.builtin.debug:
-          msg: "This is the {{ course_name }} course by {{ trainer }}. It lasts for {{ duration }}"
+    - name: Print the course details
+      ansible.builtin.debug:
+        msg: "This is the {{ course_name }} course by {{ trainer }}. It lasts for {{ duration }}"
 
-      - name: Print the course details with variables
-        course_name: "Devops"
-        duration: "6 weeks"
-        ansible.builtin.debug:
-          msg: "This is the {{ course_name }} course by {{ trainer }}. It lasts for {{ duration }}"
+    - name: Print the course details with variables
+      course_name: "Devops"
+      duration: "6 weeks"
+      ansible.builtin.debug:
+        msg: "This is the {{ course_name }} course by {{ trainer }}. It lasts for {{ duration }}"
