@@ -1,0 +1,17 @@
+- name: Read variables from a file
+  hosts: local
+  connection: local
+  vars_files:
+  - vars.yml
+
+  tasks:
+  - name: Print the course details
+    ansible.builtin.debug:
+      msg: "Course Name: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
+
+  - name: Print the course name
+    vars:
+      COURSE: "Devops and aws"
+      TRAINER: "Rama"
+    ansible.builtin.debug:
+      msg: "Course Name: {{ COURSE }}, Trainer: {{ TRAINER }}"
