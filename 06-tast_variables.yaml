@@ -2,19 +2,19 @@
   hosts: loca;
   connection: local
   vars:
-  COURSE_NAME: "Ansible"
+  COURSE-NAME: "Ansible"
   DURATION: "2 months"
   TRAINER: "Manjunatha"
 
   tasks:
     - name: Print the course details
       ansible.builtin.debug:
-        msg: "Course Name: {{ COURSE_NAME }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
+        msg: "Course Name: {{ COURSE-NAME }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
 
     - name: Print the course name
       vars:
-        COURSE_NAME: "Devops and aws"
+        COURSE-NAME: "Devops and aws"
         TRAINER: "Rama"
       ansible.builtin.debug:
-        msg: "Course Name: {{ COURSE_NAME }}, Trainer: {{ TRAINER }}"
+        msg: "Course Name: {{ COURSE-NAME }}, Trainer: {{ TRAINER }}"
 
