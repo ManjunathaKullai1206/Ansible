@@ -2,9 +2,9 @@
   hosts: loca;
   connection: local
   vars:
-  COURSE: "Ansible"
-  DURATION: "2 months"
-  TRAINER: "Manjunatha"
+    COURSE: "Ansible"
+    DURATION: "2 months"
+    TRAINER: "Manjunatha"
 
   tasks:
     - name: Print the course details
