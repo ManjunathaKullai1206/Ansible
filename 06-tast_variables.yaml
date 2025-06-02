@@ -1,19 +1,20 @@
-- name: manjunatha
-  hosts: local
+- name: Manjunatha
+  hosts: loca;
   connection: local
-
   vars:
-    course_name: "Ansible"
-    duration: "4 weeks"
-    trainer: "Manjunatha Kullai"
+  COURSE_NAME: "Ansible"
+  DURATION: "2 months"
+  TRAINER: "Manjunatha"
 
   tasks:
     - name: Print the course details
       ansible.builtin.debug:
-        msg: "This is the {{ course_name }} course by {{ trainer }}. It lasts for {{ duration }}"
+        msg: "Course Name: {{ COURSE_NAME }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
 
-    - name: Print the course details with variables
-      course_name: "Devops"
-      duration: "6 weeks"
+    - name: Print the course name
+      vars:
+        COURSE_NAME: "Devops and aws"
+        TRAINER: "Rama"
       ansible.builtin.debug:
-        msg: "This is the {{ course_name }} course by {{ trainer }}. It lasts for {{ duration }}"
+        msg: "Course Name: {{ COURSE_NAME }}, Trainer: {{ TRAINER }}"
+
