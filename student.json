@@ -1,0 +1,17 @@
+{
+    "name": "manjunatha",
+    "age": 25,
+    "email": "manjua@gmail.com",
+    "courses": [
+        {
+            "name": "Python",
+            "duration": "3 months",
+            "instructor": "John Doe"
+        },
+        {
+            "name": "Ansible",
+            "duration": "2 months",
+            "instructor": "Jane Smith"
+        }
+    ]
+}
