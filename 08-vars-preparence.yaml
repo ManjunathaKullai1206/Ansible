@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars:
-    COURSE: "Devops and aws"
-    DURATION: "3 months"
-    TRAINER: "Rama"
+    #COURSE: "Devops and aws"
+    #DURATION: "3 months"
+    #TRAINER: "Rama"
   vars_files:
     - course.yaml
   vars_prompt:
