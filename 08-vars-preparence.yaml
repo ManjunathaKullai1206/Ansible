@@ -19,6 +19,7 @@
       default: "Rama"
   tasks:
     - name: Print the course details
+      vars:
       COURSE: "AWS Devops"
       DURATION: "4 months"
       TRAINER: "Dharshana"
