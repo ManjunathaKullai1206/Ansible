@@ -1,0 +1,16 @@
+- name: Condions of Ansible When
+  hosts: local
+  connection: local
+
+  vars:
+    NUMBER: 80
+
+  tasks:
+  - name: Check the number is less than 100
+    ansible.builtin.debug:
+      msg: "The number is less than 100"
+    when: NUMBER > 100
+  - name: Check the number is greater than 100
+    ansible.builtin.debug:
+      msg: "The number is greater than 100"
+    when: NUMBER < 100
