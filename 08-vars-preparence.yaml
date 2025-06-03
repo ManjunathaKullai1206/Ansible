@@ -19,9 +19,12 @@
       default: "Rama"
   tasks:
     - name: Print the course details
-      vars:
-      COURSE: "AWS Devops"
-      DURATION: "4 months"
-      TRAINER: "Dharshana"
       ansible.builtin.debug:
         msg: "Course Name: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
+
+    - name: Print the course name
+      vars:
+        COURSE: "Ansible"
+        TRAINER: "Manjunatha"
+      ansible.builtin.debug:
+        msg: "Course Name: {{ COURSE }}, Trainer: {{ TRAINER }}"
