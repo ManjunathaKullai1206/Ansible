@@ -18,9 +18,9 @@
       prompt: "Enter the trainer's name"
       default: "Rama"
   tasks:
-   - name: Print the course details
-     COURSE: "AWS Devops"
-     DURATION: "4 months"
-     TRAINER: "Dharshana"
-     ansible.builtin.debug:
-      msg: "Course Name: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
+    - name: Print the course details
+      COURSE: "AWS Devops"
+      DURATION: "4 months"
+      TRAINER: "Dharshana"
+      ansible.builtin.debug:
+        msg: "Course Name: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
