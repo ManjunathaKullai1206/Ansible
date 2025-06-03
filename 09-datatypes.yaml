@@ -1,0 +1,24 @@
+- name: Data types in Ansible
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Devops and aws"
+    DURATION: 180
+    IS_ACTIVE: true
+
+    TOOLS:
+    - ansible
+    - docker
+    - kubernetes
+    - terraform
+    CONCEPTS:
+      CI: "Jenkins"
+      CD: "GitLab CI/CD"
+      SCRIPTING: "Python"
+      OPERATING_SYASTEM: "Linux"
+      DATABASE: "PostgreSQL"
+
+  tasks:
+  - name: Print all cource details
+    ansible.builtin.debug:
+      msg: "Course Name: {{ COURSE }}, Duration: {{ DURATION }}, Is Active: {{ IS_ACTIVE }}, Tools: {{ TOOLS }}, Concepts: {{ CONCEPTS }}"

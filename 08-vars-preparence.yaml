@@ -25,3 +25,11 @@
         #DURATION: "0.1 months"
       ansible.builtin.debug:
         msg: "Course Name: {{ COURSE }}, duration: {{ DURATION }} Trainer: {{ TRAINER }}"
+
+        #01-command line first or args is first priority
+        # #02-vars is second priority
+        # #03-vars_files is third priority
+        # #04-vars_prompt is fourth priority
+        # #05-vars_precedence is last priority
+        # #06-inventory is last priority
+  
