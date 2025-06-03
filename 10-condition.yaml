@@ -3,7 +3,7 @@
   connection: local
 
   vars:
-    NUMBER: 80
+    NUMBER: 200
 
   tasks:
   - name: Check the number is less than 100
