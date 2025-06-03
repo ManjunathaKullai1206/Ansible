@@ -1,0 +1,26 @@
+- name: reading variable from differnt places
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Devops and aws"
+    DURATION: "3 months"
+    TRAINER: "Rama"
+  vars_files:
+    - course.yaml
+  vars_prompt:
+    - name: "COURSE"
+      prompt: "Enter the course name"
+      default: "Devops and aws"
+    - name: "DURATION"
+      prompt: "Enter the course duration"
+      default: "3 months"
+    - name: "TRAINER"
+      prompt: "Enter the trainer's name"
+      default: "Rama"
+  tasks:
+  - name: Print the course details
+    COURSE: "AWS Devops"
+    DURATION: "4 months"
+    TRAINER: "Dharshana"
+    ansible.builtin.debug:
+      msg: "Course Name: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
