@@ -1,14 +1,11 @@
 #!/bin/bash
 
-#enter the file name
- read -p "Enter a file name" filename
- 
-#check if the file name is end with .war, .zip, .ear
+# Prompt the user to enter the file name
+read -p "Enter the filename: " filename
 
-if [["$filename" == *.war ||"$filename" == *.zip || "$filename" == *.ear]]; then
-echo "file is valid"
-
+# Check if the file ends with .war, .zip, or .ear
+if [[ "$filename" == *.war || "$filename" == *.zip || "$filename" == *.ear ]]; then
+    echo "File extension ($filename) is valid"
 else
-	echo "invalid file extension"
-
-fi  
+    echo "ERROR: File extension ($filename) is Invalid"
+fi
