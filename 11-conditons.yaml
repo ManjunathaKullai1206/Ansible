@@ -1,0 +1,11 @@
+---
+- name: Ansible conditons example
+  hosts: frontend
+  become: true
+
+  tasks:
+  - name: Install nginx if RedHat
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"
