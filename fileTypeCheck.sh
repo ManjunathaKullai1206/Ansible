@@ -5,7 +5,7 @@
  
 #check if the file name is end with .war, .zip, .ear
 
-if [["$filename" == *.war ||"$file ==*.zip" || "$filename ==*.ear"]]; then
+if [["$filename" == *.war ||"$filename" == *.zip || "$filename" == *.ear]]; then
 echo "file is valid"
 
 else
