@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #enter the file name
- read -p
- filename
+ read -p "Enter a file name" filename
  
 #check if the file name is end with .war, .zip, .ear
 
@@ -12,4 +11,4 @@ echo "file is valid"
 else
 	echo "invalid file extension"
 
-fi
+fi  
